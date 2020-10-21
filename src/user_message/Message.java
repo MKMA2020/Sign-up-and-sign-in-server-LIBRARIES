@@ -7,7 +7,10 @@ package user_message;
 
 /**
  *
- * @author 2dam
+ * This class'll be used as the messsage object. 
+ * Which will be sent across both apps 
+ * in order to fullfill multiple tasks and report exceptions.
+ * @author Martin Gros
  */
 public class Message {
 

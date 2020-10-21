@@ -10,8 +10,10 @@ import java.security.Timestamp;
 
 
 /**
- *
- * @author 2dam
+ * This class contains the user object.
+ * It will be sent inside a message to the server
+ * and will be either added or checked with the db
+ * @author Martin Gros
  */
 public class User {
 
