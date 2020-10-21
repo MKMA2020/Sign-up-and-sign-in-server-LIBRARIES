@@ -10,5 +10,8 @@ package signable;
  * @author 2dam
  */
 public interface Signable {
+    public void signIn();
+    public void signUp();
+    public void signOut();
     
 }

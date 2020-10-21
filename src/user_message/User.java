@@ -5,12 +5,96 @@
  */
 package user_message;
 
+import java.security.Timestamp;
+
+
+
 /**
  *
  * @author 2dam
  */
 public class User {
-    public int hola() {
-        return 0;
+
+
+    private long id;
+    private String login;
+    private String email;
+    private String fullName;
+    private boolean status;
+    private enum privilege{
+        USER,
+        ADMIN
+    }
+    private String password;
+    private Timestamp lastAccess;
+    private Timestamp lastPasswordChange;
+    
+    
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Timestamp getLastAccess() {
+        return lastAccess;
+    }
+
+    public void setLastAccess(Timestamp lastAccess) {
+        this.lastAccess = lastAccess;
+    }
+
+    public Timestamp getLastPasswordChange() {
+        return lastPasswordChange;
+    }
+
+    public void setLastPasswordChange(Timestamp lastPasswordChange) {
+        this.lastPasswordChange = lastPasswordChange;
     }
 }
+
+
+
+
