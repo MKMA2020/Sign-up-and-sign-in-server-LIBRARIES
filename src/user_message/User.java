@@ -31,7 +31,10 @@ public class User {
     private Timestamp lastAccess;
     private Timestamp lastPasswordChange;
     
-    
+    /**
+     * 
+     * @return This method will return the User ID long.
+     */
     public long getId() {
         return id;
     }
@@ -39,7 +42,10 @@ public class User {
     public void setId(long id) {
         this.id = id;
     }
-
+    /**
+     * 
+     * @return This method will return the Username login String.
+     */
     public String getLogin() {
         return login;
     }
@@ -47,7 +53,10 @@ public class User {
     public void setLogin(String login) {
         this.login = login;
     }
-
+    /**
+     * 
+     * @return This method will return the User Email String.
+     */
     public String getEmail() {
         return email;
     }
@@ -55,7 +64,10 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    /**
+     * 
+     * @return This method will return the full name of the user as a String.
+     */
     public String getFullName() {
         return fullName;
     }
@@ -63,7 +75,10 @@ public class User {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
-
+    /**
+     * 
+     * @return This method will return wheter the User status is true or false (True will mean the user is active and False will mean user is inactive).
+     */
     public boolean isStatus() {
         return status;
     }
@@ -71,7 +86,10 @@ public class User {
     public void setStatus(boolean status) {
         this.status = status;
     }
-
+    /**
+     * 
+     * @return This method will return the User password as a String.
+     */
     public String getPassword() {
         return password;
     }
@@ -79,7 +97,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    /**
+     * 
+     * @return This method will return the Last Access of the User as a Timestamp.
+     */
     public Timestamp getLastAccess() {
         return lastAccess;
     }
@@ -87,7 +108,10 @@ public class User {
     public void setLastAccess(Timestamp lastAccess) {
         this.lastAccess = lastAccess;
     }
-
+    /**
+     * 
+     * @return This method will return the last Password Change of the User as a Timestamp.
+     */
     public Timestamp getLastPasswordChange() {
         return lastPasswordChange;
     }
