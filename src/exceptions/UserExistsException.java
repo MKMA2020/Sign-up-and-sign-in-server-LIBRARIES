@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class UserExistsException extends Exception{
     public UserExistsException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.UserExistsException.java");
         LOG.log(Level.WARNING, "User being registered already exists");
     }
 }

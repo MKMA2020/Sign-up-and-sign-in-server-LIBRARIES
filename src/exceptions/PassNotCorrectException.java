@@ -5,6 +5,7 @@
  */
 package exceptions;
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,9 +13,9 @@ import java.util.logging.Logger;
  * Exeption triggered by trying to log in with an incorrect password.
  * @author Aitor Garcia
  */
-public class PassNotCorrectException extends Exception{
+public class PassNotCorrectException extends SQLException{
     public PassNotCorrectException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.PassNotCorrectException.java");
         LOG.log(Level.WARNING, "User introduced the wrong password");
     }
 }

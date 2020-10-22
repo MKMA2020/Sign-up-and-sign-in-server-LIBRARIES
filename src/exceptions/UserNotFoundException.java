@@ -5,6 +5,7 @@
  */
 package exceptions;
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,9 +13,9 @@ import java.util.logging.Logger;
  * Exception triggered by trying to log in as a user that doesn't exist.
  * @author Aitor Garcia
  */
-public class UserNotFoundException extends Exception{
+public class UserNotFoundException extends SQLException{
     public UserNotFoundException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.UserNotFoundException.java");
         LOG.log(Level.WARNING, "The user that was being searched wasn't found");
     }
 }
