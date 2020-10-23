@@ -5,15 +5,15 @@
  */
 package signable;
 
-import user_message.User;
+import user_message.Message;
 
 /**
  *
  * @author 2dam
  */
 public interface Signable {
-    public void signIn(User user);
-    public void signUp(User user);
-    public void signOut();
+    public void signIn(Message message);
+    public void signUp(Message message);
+    public void signOut(Message message);
     
 }
