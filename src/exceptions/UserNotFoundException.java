@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  */
 public class UserNotFoundException extends SQLException{
     public UserNotFoundException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.UserNotFoundException.java");
         LOG.log(Level.WARNING, "The user that was being searched wasn't found");
     }
 }

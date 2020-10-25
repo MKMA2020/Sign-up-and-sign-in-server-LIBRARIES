@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class TimeOutException extends Exception{
     public TimeOutException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.TimeOutException.java");
         LOG.log(Level.SEVERE, "Server didn't respond in time");
     }
 }

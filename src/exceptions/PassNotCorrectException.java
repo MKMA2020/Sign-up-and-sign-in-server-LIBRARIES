@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  */
 public class PassNotCorrectException extends SQLException{
     public PassNotCorrectException(){
-        final Logger LOG = Logger.getLogger("logger.Logger.log");
+        final Logger LOG = Logger.getLogger("exceptions.PassNotCorrectException.java");
         LOG.log(Level.WARNING, "User introduced the wrong password");
     }
 }
