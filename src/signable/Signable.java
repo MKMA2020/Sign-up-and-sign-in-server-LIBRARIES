@@ -5,15 +5,16 @@
  */
 package signable;
 
-import user_message.Message;
+import exceptions.*;
+import user_message.User;
 
 /**
  *
  * @author 2dam
  */
 public interface Signable {
-    public void signIn(Message message);
-    public void signUp(Message message);
-    public void signOut(Message message);
+    public User signIn(User user) throws PassNotCorrectException, UserNotFoundException;
+   /* public void signUp(Message message);
+    public void signOut(Message message);*/
     
 }

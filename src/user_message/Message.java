@@ -45,7 +45,10 @@ public class Message implements Serializable{
     public messageType getMessageType() {
         return messageType;
     }
-
+    /**
+     * this method will receive an int which will be the kind of action that 
+     * we will execute later on, in the server side.
+    **/ 
     public void setMessageType(int num) {
         if (num == 1) 
             this.messageType = messageType.SIGNIN;
