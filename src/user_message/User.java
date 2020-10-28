@@ -5,6 +5,7 @@
  */
 package user_message;
 
+import java.io.Serializable;
 import java.security.Timestamp;
 
 
@@ -15,7 +16,7 @@ import java.security.Timestamp;
  * and will be either added or checked with the db
  * @author Martin Gros
  */
-public class User {
+public class User implements Serializable{
 
 
     private long id;
