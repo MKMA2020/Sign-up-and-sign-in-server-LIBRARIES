@@ -5,6 +5,8 @@
  */
 package user_message;
 
+import java.io.Serializable;
+
 /**
  *
  * This class'll be used as the messsage object. 
@@ -12,15 +14,17 @@ package user_message;
  * in order to fullfill multiple tasks and report exceptions.
  * @author Martin Gros
  */
-public class Message {
-
-   
-    private User user;
-    private String help;
+public class Message implements Serializable{
+    
     private enum messageType{
         SIGNIN,
         SIGNUP
     }
+
+   
+    private User user;
+    private String help;
+    private messageType messageType;
     
     public User getUser() {
         return user;
@@ -37,6 +41,19 @@ public class Message {
     public void setHelp(String help) {
         this.help = help;
     }
+
+    public messageType getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(int num) {
+        if (num == 1) 
+            this.messageType = messageType.SIGNIN;
+        else
+            this.messageType = messageType.SIGNUP;
+    }
+    
+    
     
     
 }
