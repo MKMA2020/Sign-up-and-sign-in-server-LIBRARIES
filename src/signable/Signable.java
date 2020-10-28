@@ -5,15 +5,17 @@
  */
 package signable;
 
-import user_message.Message;
+import exceptions.*;
+import user_message.User;
 
 /**
- *
- * @author 2dam
+ * The interface containing the methods to the sign-up,
+ * sign-in and sign-out.
+ * @author Martin Gros 
  */
 public interface Signable {
-    public void signIn(Message message);
-    public void signUp(Message message);
-    public void signOut(Message message);
+    public User signIn(User user) throws DataBaseConnectionException, PassNotCorrectException, ServerErrorException, TimeOutException, UserNotFoundException;
+    public User signUp(User user)throws DataBaseConnectionException, ServerErrorException, TimeOutException, UserExistsException;
+    public User signOut(User user);
     
 }
