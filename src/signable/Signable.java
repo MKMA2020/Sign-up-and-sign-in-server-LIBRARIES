@@ -9,8 +9,8 @@ import exceptions.*;
 import user_message.User;
 
 /**
- * The interface containing the methods to the sign-up,
- * sign-in and sign-out.
+ * The interface containing the sign-up,
+ * sign-in and sign-out methods.
  * @author Martin Gros 
  */
 public interface Signable {

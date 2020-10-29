@@ -43,6 +43,7 @@ public class Message implements Serializable{
     }
 
     public messageType getMessageType() {
+        
         return messageType;
     }
 
