@@ -9,23 +9,26 @@ import java.io.Serializable;
 
 /**
  *
- * This class'll be used as the messsage object. 
- * Which will be sent across both apps 
- * in order to fullfill multiple tasks and report exceptions.
+ * This class'll be used as the messsage object. Which will be sent across both
+ * apps in order to fullfill multiple tasks and report exceptions.
+ *
  * @author Martin Gros
  */
-public class Message implements Serializable{
-    
-    private enum messageType{
-        SIGNIN,
-        SIGNUP
+public class Message implements Serializable {
+
+    public Message(User user, MessageType messageType) {
+        this.user = user;
+        this.messageType = messageType;
     }
+    
+    
 
    
+
     private User user;
     private String help;
-    private messageType messageType;
-    
+    private MessageType messageType;
+
     public User getUser() {
         return user;
     }
@@ -42,19 +45,14 @@ public class Message implements Serializable{
         this.help = help;
     }
 
-    public messageType getMessageType() {
-        
+    public MessageType getMessageType() {
         return messageType;
     }
 
-    public void setMessageType(int num) {
-        if (num == 1) 
-            this.messageType = messageType.SIGNIN;
-        else
-            this.messageType = messageType.SIGNUP;
+    public void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
     }
+
     
-    
-    
-    
+
 }
