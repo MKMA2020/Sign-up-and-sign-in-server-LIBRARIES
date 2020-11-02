@@ -25,9 +25,12 @@ public class Message implements Serializable {
 
    
 
-    private User user;
-    private String help;
+    private User user;   
     private MessageType messageType;
+
+    public Message() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public User getUser() {
         return user;
@@ -37,13 +40,7 @@ public class Message implements Serializable {
         this.user = user;
     }
 
-    public String getHelp() {
-        return help;
-    }
-
-    public void setHelp(String help) {
-        this.help = help;
-    }
+   
 
     public MessageType getMessageType() {
         return messageType;

@@ -11,5 +11,13 @@ package user_message;
  */
 public enum MessageType {
     SIGNIN,
-    SIGNUP;
+    SIGNUP,
+    USEREXISTS,
+    USERNOTFOUND,
+    PASSNOTCORRECT,
+    DATABASEERROR,
+    TIMEOUTEXCEPTION,
+    SERVERERROR,
+    OKAY
+    ;
 }
