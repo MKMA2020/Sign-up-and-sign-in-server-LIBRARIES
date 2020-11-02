@@ -1,21 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package signable;
 
 import exceptions.*;
 import user_message.User;
 
 /**
- * The interface containing the sign-up,
- * sign-in and sign-out methods.
- * @author Martin Gros 
+ * Signable interface will declare SignIn, SignUp and SignOut methods that will
+ * be used in the Server and Client side of the App.
+ *
+ * @author Martin Gros
  */
 public interface Signable {
-    public User signIn(User user) throws DataBaseConnectionException, PassNotCorrectException, ServerErrorException, TimeOutException, UserNotFoundException;
-    public User signUp(User user)throws DataBaseConnectionException, ServerErrorException, TimeOutException, UserExistsException;
+    /**
+     * 
+     * @param user
+     * @return
+     * @throws DataBaseConnectionException
+     * @throws PassNotCorrectException
+     * @throws ServerErrorException
+     * @throws TimeOutException
+     * @throws UserNotFoundException 
+     */
+    public User signIn(User user) throws DataBaseConnectionException,
+                                         PassNotCorrectException,
+                                         ServerErrorException,
+                                         TimeOutException,
+                                         UserNotFoundException;
+    /**
+     * 
+     * @param user
+     * @return
+     * @throws DataBaseConnectionException
+     * @throws ServerErrorException
+     * @throws TimeOutException
+     * @throws UserExistsException 
+     */
+    public User signUp(User user) throws DataBaseConnectionException,
+                                         ServerErrorException,
+                                         TimeOutException,
+                                         UserExistsException;
+    /**
+     * 
+     * @param user
+     * @return 
+     */
     public User signOut(User user);
-    
+
 }
