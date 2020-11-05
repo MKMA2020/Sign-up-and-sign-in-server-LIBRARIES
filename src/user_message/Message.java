@@ -1,62 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package user_message;
 
 import java.io.Serializable;
 
 /**
+ * Message class will contain the message object that is sent between the Server
+ * and Client side of the app.
  *
- * This class'll be used as the messsage object. 
- * Which will be sent across both apps 
- * in order to fullfill multiple tasks and report exceptions.
  * @author Martin Gros
  */
-public class Message implements Serializable{
-    
-    private enum messageType{
-        SIGNIN,
-        SIGNUP
+public class Message implements Serializable {
+
+    private User user;
+    private MessageType messageType;
+
+    /**
+     * Class Constructor to create a Message.
+     *
+     * @param user from the User class.
+     * @param messageType from the enum MessageType.
+     */
+    public Message(User user, MessageType messageType) {
+        this.user = user;
+        this.messageType = messageType;
     }
 
-   
-    private User user;
-    private String help;
-    private messageType messageType;
-    
+    /**
+     * @return Returns the user of the message.
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * @param user Sets the user on the message.
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
-    public String getHelp() {
-        return help;
-    }
-
-    public void setHelp(String help) {
-        this.help = help;
-    }
-
-    public messageType getMessageType() {
+    /**
+     * @return Returns the messageType of the message.
+     */
+    public MessageType getMessageType() {
         return messageType;
     }
+
     /**
-     * this method will receive an int which will be the kind of action that 
-     * we will execute later on, in the server side.
-    **/ 
-    public void setMessageType(int num) {
-        if (num == 1) 
-            this.messageType = messageType.SIGNIN;
-        else
-            this.messageType = messageType.SIGNUP;
+     * @param messageType Sets the messageType on the message.
+     */
+    public void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
     }
-    
-    
-    
-    
+
 }
+

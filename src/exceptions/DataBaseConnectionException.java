@@ -10,12 +10,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Exception triggered by trying to log in as a user that doesn't exist.
+ * Exception triggered by failing to connect to the database.
  * @author Aitor Garcia
  */
-public class UserNotFoundException extends Exception{
-    public UserNotFoundException(){
-        final Logger LOG = Logger.getLogger("exceptions.UserNotFoundException.java");
-        LOG.log(Level.WARNING, "The user that was being searched wasn't found");
+public class DataBaseConnectionException extends SQLException{
+    public DataBaseConnectionException(){
+        final Logger LOG = Logger.getLogger("exceptions.DataBaseConnectionException.java");
+        LOG.log(Level.SEVERE, "There was an error attempting to connect to the database");
     }
 }
