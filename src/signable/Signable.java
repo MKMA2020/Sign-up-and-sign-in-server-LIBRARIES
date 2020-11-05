@@ -11,14 +11,14 @@ import user_message.User;
  */
 public interface Signable {
     /**
-     * 
-     * @param user
-     * @return
-     * @throws DataBaseConnectionException
-     * @throws PassNotCorrectException
-     * @throws ServerErrorException
-     * @throws TimeOutException
-     * @throws UserNotFoundException 
+     * This method receives an user and tries to log it into the database.
+     * @param user that will be signed into the app.
+     * @return the user that has signed in.
+     * @throws DataBaseConnectionException when there is an error with the database.
+     * @throws PassNotCorrectException when the password is incorrect.
+     * @throws ServerErrorException when the server has an unexpected error.
+     * @throws TimeOutException when the server doesn't answer in time.
+     * @throws UserNotFoundException when the user does not exist.
      */
     public User signIn(User user) throws DataBaseConnectionException,
                                          PassNotCorrectException,
@@ -26,22 +26,22 @@ public interface Signable {
                                          TimeOutException,
                                          UserNotFoundException;
     /**
-     * 
-     * @param user
-     * @return
-     * @throws DataBaseConnectionException
-     * @throws ServerErrorException
-     * @throws TimeOutException
-     * @throws UserExistsException 
+     * This method receives an user and tries to register it into the database.
+     * @param user that will be registered in the database.
+     * @return the user that has been registered.
+     * @throws DataBaseConnectionException when there is an error with the database.
+     * @throws ServerErrorException when the server has an unexpected error.
+     * @throws TimeOutException when the server doesn't answer in time.
+     * @throws UserExistsException when the user introduced already exists.
      */
     public User signUp(User user) throws DataBaseConnectionException,
                                          ServerErrorException,
                                          TimeOutException,
                                          UserExistsException;
     /**
-     * 
-     * @param user
-     * @return 
+     * This method would log the user out of the app (unimplemented).
+     * @param user that would log out of the app.
+     * @return the user that has logged out.
      */
     public User signOut(User user);
 
