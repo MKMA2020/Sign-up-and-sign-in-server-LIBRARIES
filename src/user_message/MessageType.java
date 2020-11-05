@@ -5,6 +5,7 @@ package user_message;
  * the options of messageType for the Message Class.
  * @author Martin Gros
  */
+
 public enum MessageType {
     SIGNIN,
     SIGNUP,

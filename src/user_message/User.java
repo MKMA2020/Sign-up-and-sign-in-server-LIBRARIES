@@ -26,6 +26,7 @@ public class User implements Serializable {
     }
 
     /**
+     * This method gets the user's id.
      * @return Returns the user id.
      */
     public long getId() {
@@ -33,14 +34,15 @@ public class User implements Serializable {
     }
 
     /**
-     *
-     * @param id Sets the user id.
+     * This method sets the user id.
+     * @param id 
      */
     public void setId(long id) {
         this.id = id;
     }
 
     /**
+     * This method gets the user's login.
      * @return Returns the user login.
      */
     public String getLogin() {
@@ -48,13 +50,15 @@ public class User implements Serializable {
     }
 
     /**
-     * @param login Sets the user login.
+     * This method sets the user login.
+     * @param login 
      */
     public void setLogin(String login) {
         this.login = login;
     }
 
     /**
+     * This method gets the user's email.
      * @return Returns the user email.
      */
     public String getEmail() {
@@ -62,21 +66,24 @@ public class User implements Serializable {
     }
 
     /**
-     * @param email Sets the user email.
+     * This method sets the user's email
+     * @param email 
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * @return Returns the user fullName.
+     * This method gets the user's full name.
+     * @return Returns the user's name.
      */
     public String getFullName() {
         return fullName;
     }
 
     /**
-     * @param fullName Sets the user fullName.
+     * This method sets the user's full name.
+     * @param fullName 
      */
     public void setFullName(String fullName) {
         this.fullName = fullName;
@@ -103,6 +110,7 @@ public class User implements Serializable {
     }
 
     /**
+     * This method gets the user's password
      * @return Returns the user password.
      */
     public String getPassword() {
@@ -110,13 +118,15 @@ public class User implements Serializable {
     }
 
     /**
-     * @param password Sets the user password.
+     * This method sets the user's password
+     * @param password 
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
+     * This method gets the date in which the user last logged in.
      * @return Returns the user lastAccess.
      */
     public Timestamp getLastAccess() {
@@ -124,13 +134,15 @@ public class User implements Serializable {
     }
 
     /**
-     * @param lastAccess Sets the user lastAccess.
+     * This method sets the date in which the user last logged in.
+     * @param lastAccess 
      */
     public void setLastAccess(Timestamp lastAccess) {
         this.lastAccess = lastAccess;
     }
 
     /**
+     * It gets the date when the user changed its password.
      * @return Returns the user lastPasswordChange.
      */
     public Timestamp getLastPasswordChange() {
@@ -138,7 +150,8 @@ public class User implements Serializable {
     }
 
     /**
-     * @param lastPasswordChange Sets the user lastPasswordChange.
+     * This method sets when the user's password has been changed.
+     * @param lastPasswordChange 
      */
     public void setLastPasswordChange(Timestamp lastPasswordChange) {
         this.lastPasswordChange = lastPasswordChange;
